@@ -314,7 +314,7 @@ h3 {
 
 .project-card {
   display: grid;
-  grid-template-columns: minmax(17rem, 0.75fr) minmax(0, 1.25fr);
+  grid-template-columns: minmax(20rem, 1fr) minmax(0, 1.2fr);
   overflow: hidden;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -332,6 +332,43 @@ h3 {
 .project-description {
   margin-bottom: 1.4rem;
   color: var(--color-muted);
+}
+
+.project-workflow {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 1.15rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-muted);
+}
+
+.project-workflow h4 {
+  margin: 0 0 0.75rem;
+  color: var(--color-accent-dark);
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.workflow-steps {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.workflow-steps li {
+  padding-left: 0.25rem;
+}
+
+.workflow-steps li + li {
+  margin-top: 0.4rem;
+}
+
+.workflow-note {
+  margin: 1rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.9rem;
 }
 
 .tag-list {
@@ -364,6 +401,13 @@ h3 {
   margin-top: auto;
 }
 
+.project-media {
+  display: grid;
+  align-content: center;
+  min-width: 0;
+  background: var(--color-border);
+}
+
 .project-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
@@ -386,19 +430,22 @@ h3 {
   object-fit: contain;
 }
 
-.screenshot-frame figcaption {
-  position: absolute;
-  right: 0.8rem;
-  bottom: 0.8rem;
-  left: 0.8rem;
-  width: max-content;
-  max-width: calc(100% - 1.6rem);
-  padding: 0.45rem 0.7rem;
-  border: 1px solid rgb(255 255 255 / 35%);
-  border-radius: 999px;
-  background: rgb(20 34 32 / 86%);
-  color: #fff;
-  font-size: 0.72rem;
+.project-video {
+  margin: 1px 0 0;
+  background: var(--color-surface);
+}
+
+.project-video video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #0d1211;
+}
+
+.project-video figcaption {
+  padding: 0.75rem 1rem;
+  color: var(--color-muted);
+  font-size: 0.8rem;
   font-weight: 700;
 }
 
@@ -491,7 +538,7 @@ h3 {
     max-width: 34rem;
   }
 
-  .project-gallery {
+  .project-media {
     grid-row: 1;
   }
 

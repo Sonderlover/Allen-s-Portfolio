@@ -4,7 +4,7 @@
 const projects = [
   {
     title: "Bubble Blitz",
-    description: "Browser hand-gesture game built with MediaPipe Tasks Vision — gesture-matching bubbles, lives system, combo multiplier, golden round bonus.",
+    description: "Browser hand-gesture game built with MediaPipe Tasks Vision, featuring gesture-matching bubbles, a lives system, a combo multiplier, and a golden round bonus.",
     tags: ["MediaPipe", "JavaScript", "Computer Vision"],
     screenshots: ["assets/images/bubble-blitz-1.png"],
     links: {
@@ -15,13 +15,23 @@ const projects = [
   },
   {
     title: "AI Quotation System",
-    description: "Automated pipeline that reads client enquiry emails, matches items against a Schedule of Rates, and drafts an itemised quotation using an LLM.",
+    description: "AI Quotation System started as a school capstone project that I built with my group. Adrenalin Group liked the project and offered me an internship so I could continue developing it for the company.",
+    howItWorks: [
+      "Enter OpenAI API key",
+      "Connect Gmail (or use Secrets)",
+      "Upload SOR JSON",
+      "Click Check for New Emails",
+      "Select an email, then Generate Quotation",
+      "Review, then Approve and Send"
+    ],
+    howItWorksNote: "The whole workflow is controlled from the front end so Adrenalin's non-technical staff can operate it and adjust it at any time. It connects to each staff member's own work email, reads incoming enquiries, and scans attached documents and spreadsheets for request details. Staff must review every generated quotation thoroughly before approving it, and nothing is sent automatically. After approval, the quotation is emailed directly back to the client. This helps the company handle a high daily volume of enquiries more quickly.",
     tags: ["Streamlit", "OpenAI API", "Google Sheets API", "IMAP/SMTP"],
     screenshots: ["assets/images/quotation-system-1.png"],
+    video: "assets/videos/quotation-system-demo.mp4",
     links: {
-      liveDemo: "PASTE_STREAMLIT_LINK_HERE",
+      liveDemo: "https://group2-quotatio.streamlit.app",
       repo: "PASTE_GITHUB_REPO_LINK_HERE",
-      video: "PASTE_DEMO_VIDEO_LINK_HERE"
+      video: ""
     }
   }
   // Add more project objects here later using the same shape.
@@ -29,8 +39,8 @@ const projects = [
 
 const experience = [
   {
-    title: "Aerospace engineering internship — SAESL",
-    caption: "PLACEHOLDER — describe what I did day-to-day and what I learned.",
+    title: "Aerospace engineering internship at SAESL",
+    caption: "PLACEHOLDER. Describe what I did day-to-day and what I learned.",
     image: "assets/images/saesl-placeholder.png",
     date: ""
   },
@@ -41,8 +51,8 @@ const experience = [
     date: "2024"
   },
   {
-    title: "Event crew — First Wave",
-    caption: "PLACEHOLDER — describe the role; this also connects to my current internship building tools for live event booths.",
+    title: "Event crew at First Wave",
+    caption: "PLACEHOLDER. Describe the role; this also connects to my current internship building tools for live event booths.",
     image: "assets/images/firstwave-placeholder.png",
     date: ""
   }

@@ -48,7 +48,27 @@ function renderProjects() {
       tags.append(createElement("li", null, tag));
     });
 
-    content.append(heading, description, tags);
+    content.append(heading, description);
+
+    if (Array.isArray(project.howItWorks) && project.howItWorks.length > 0) {
+      const workflow = createElement("section", "project-workflow");
+      const workflowHeading = createElement("h4", null, "How it works");
+      const workflowSteps = createElement("ol", "workflow-steps");
+
+      project.howItWorks.forEach((step) => {
+        workflowSteps.append(createElement("li", null, step));
+      });
+
+      workflow.append(workflowHeading, workflowSteps);
+
+      if (project.howItWorksNote) {
+        workflow.append(createElement("p", "workflow-note", project.howItWorksNote));
+      }
+
+      content.append(workflow);
+    }
+
+    content.append(tags);
 
     const actions = createElement("div", "project-actions");
     Object.entries(project.links).forEach(([type, url]) => {
@@ -79,17 +99,32 @@ function renderProjects() {
       image.width = 1600;
       image.height = 900;
 
-      const caption = createElement(
-        "figcaption",
-        null,
-        `${project.title} — screenshot ${imageNumber}`
-      );
-
-      figure.append(image, caption);
+      figure.append(image);
       gallery.append(figure);
     });
 
-    article.append(content, gallery);
+    const media = createElement("div", "project-media");
+    media.append(gallery);
+
+    if (project.video) {
+      const videoFigure = createElement("figure", "project-video");
+      const video = document.createElement("video");
+      const videoCaption = createElement("figcaption", null, `${project.title} demo video`);
+
+      video.src = project.video;
+      video.controls = true;
+      video.preload = "metadata";
+      video.setAttribute("aria-label", `${project.title} demo video`);
+
+      if (project.screenshots.length > 0) {
+        video.poster = project.screenshots[0];
+      }
+
+      videoFigure.append(video, videoCaption);
+      media.append(videoFigure);
+    }
+
+    article.append(content, media);
     projectList.append(article);
   });
 }

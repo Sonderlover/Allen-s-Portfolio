@@ -13,10 +13,11 @@ The site is built with plain HTML5, CSS3, and vanilla JavaScript. It has no thir
 ```text
 .
 ├── index.html          # Page structure and static introductory content
-├── data.js             # Portfolio projects, screenshots, captions, and links
+├── data.js             # Portfolio content, workflows, media paths, and links
 ├── script.js           # Rendering logic for the data-driven sections
 ├── style.css           # Layout, responsive design, and visual styling
-└── assets/images/      # Project and experience images
+├── assets/images/      # Project and experience images
+└── assets/videos/      # Embedded project demonstrations
 ```
 
 Portfolio content is kept in `data.js`. Add or update project and experience entries there without changing the layout code. `script.js` renders that content, while `style.css` controls presentation and responsive behavior.
