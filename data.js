@@ -61,9 +61,10 @@ const experience = [
   },
   {
     title: "Current intern at Adrenalin Group",
-    caption: "Current intern at Adrenalin Group, working across two departments. Under Aether Lab, I build browser-based games for event booths, including Bubble Blitz, a hand-gesture game using MediaPipe. Under AVPD Studios, I help set up event technical equipment such as cameras and lighting for live events.",
+    caption: "Current intern at Adrenalin Group, working across two departments. Under Aether Lab, I build browser-based games for event booths, including Bubble Blitz, a hand-gesture game using MediaPipe, and a separate Dalgona game. Under AVPD Studios, I help set up event technical equipment such as cameras and lighting for live events.",
     image: "assets/images/adrenalin-internship.png",
-    video: "assets/videos/adrenalin-game-demo.mp4",
+    video: "assets/videos/dalgona-game-demo.mp4",
+    videoLabel: "Watch Dalgona game demo",
     date: "Current"
   }
   // Add courses, awards, or other experience entries here using the same shape.

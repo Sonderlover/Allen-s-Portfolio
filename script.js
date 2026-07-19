@@ -183,7 +183,7 @@ function renderExperience() {
       }
 
       if (item.video) {
-        const videoLink = createExternalLink(item.video, "Watch game demo");
+        const videoLink = createExternalLink(item.video, item.videoLabel || "Watch game demo");
 
         if (videoLink) {
           experienceActions.append(videoLink);
