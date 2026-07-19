@@ -147,6 +147,18 @@ function renderExperience() {
     image.width = 1600;
     image.height = 900;
 
+    let experienceMedia = image;
+
+    if (item.certificate) {
+      const certificateImageLink = createElement("a", "experience-image-link");
+      certificateImageLink.href = item.certificate;
+      certificateImageLink.target = "_blank";
+      certificateImageLink.rel = "noopener";
+      certificateImageLink.setAttribute("aria-label", `View the complete ${item.title} certificate`);
+      certificateImageLink.append(image);
+      experienceMedia = certificateImageLink;
+    }
+
     titleRow.append(createElement("h3", null, item.title));
 
     if (item.date) {
@@ -154,7 +166,22 @@ function renderExperience() {
     }
 
     caption.append(titleRow, createElement("p", null, item.caption));
-    figure.append(image, caption);
+
+    if (item.nameNote) {
+      caption.append(createElement("p", "experience-note", item.nameNote));
+    }
+
+    if (item.certificate) {
+      const certificateActions = createElement("div", "project-actions experience-actions");
+      const certificateLink = createExternalLink(item.certificate, "View certificate");
+
+      if (certificateLink) {
+        certificateActions.append(certificateLink);
+        caption.append(certificateActions);
+      }
+    }
+
+    figure.append(experienceMedia, caption);
     article.append(figure);
     experienceGrid.append(article);
   });

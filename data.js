@@ -4,18 +4,19 @@
 const projects = [
   {
     title: "Bubble Blitz",
-    description: "Browser hand-gesture game built with MediaPipe Tasks Vision, featuring gesture-matching bubbles, a lives system, a combo multiplier, and a golden round bonus.",
+    description: "A small hand-gesture game built with MediaPipe during my internship at Adrenalin Group. Players match gestures to pop bubbles, with a lives system, combo multiplier, and golden round bonus.",
     tags: ["MediaPipe", "JavaScript", "Computer Vision"],
     screenshots: ["assets/images/bubble-blitz-1.png"],
+    video: "assets/videos/bubble-blitz-demo.mp4",
     links: {
-      liveDemo: "PASTE_GITHUB_PAGES_LINK_HERE",
-      repo: "PASTE_GITHUB_REPO_LINK_HERE",
+      liveDemo: "https://sonderlover.github.io/Adrenalin-new-game/",
+      repo: "https://github.com/Sonderlover/Adrenalin-new-game",
       video: ""
     }
   },
   {
     title: "AI Quotation System",
-    description: "AI Quotation System started as a school capstone project that I built with my group. Adrenalin Group liked the project and offered me an internship so I could continue developing it for the company.",
+    description: "AI Quotation System started as a school capstone project that I built with my group. Adrenalin Group liked the project and offered me an internship so I could continue developing it for the company. The system uses OpenAI's GPT-4o mini model to help draft itemised quotations.",
     howItWorks: [
       "Enter OpenAI API key",
       "Connect Gmail (or use Secrets)",
@@ -30,7 +31,7 @@ const projects = [
     video: "assets/videos/quotation-system-demo.mp4",
     links: {
       liveDemo: "https://group2-quotatio.streamlit.app",
-      repo: "PASTE_GITHUB_REPO_LINK_HERE",
+      repo: "",
       video: ""
     }
   }
@@ -46,8 +47,10 @@ const experience = [
   },
   {
     title: "NITEC in Aerospace Technology",
-    caption: "Completed Jan 2023 – Dec 2024, before progressing to Higher Nitec in AI Applications.",
-    image: "assets/images/nitec-cert-placeholder.png",
+    caption: "A two-year full-time course covering aircraft airframe and engine maintenance and repair. Hands-on training included riveting and sheet metal work, TIG welding, non-destructive testing (NDT) for detecting defects in aircraft structures, and composite structure repair using cold and hot bonding on honeycomb panels. This technical foundation later shaped how I approach building tools, from hardware-level troubleshooting to systematic problem solving.",
+    image: "assets/images/nitec-aerospace-certificate.png",
+    certificate: "assets/certificates/nitec-aerospace-technology.pdf",
+    nameNote: "This certificate was issued under my former legal name, Catle Carl Allen Santos, before I became a Singapore citizen.",
     date: "2024"
   },
   {
