@@ -171,14 +171,26 @@ function renderExperience() {
       caption.append(createElement("p", "experience-note", item.nameNote));
     }
 
-    if (item.certificate) {
-      const certificateActions = createElement("div", "project-actions experience-actions");
-      const certificateLink = createExternalLink(item.certificate, "View certificate");
+    if (item.certificate || item.video) {
+      const experienceActions = createElement("div", "project-actions experience-actions");
 
-      if (certificateLink) {
-        certificateActions.append(certificateLink);
-        caption.append(certificateActions);
+      if (item.certificate) {
+        const certificateLink = createExternalLink(item.certificate, "View certificate");
+
+        if (certificateLink) {
+          experienceActions.append(certificateLink);
+        }
       }
+
+      if (item.video) {
+        const videoLink = createExternalLink(item.video, "Watch game demo");
+
+        if (videoLink) {
+          experienceActions.append(videoLink);
+        }
+      }
+
+      caption.append(experienceActions);
     }
 
     figure.append(experienceMedia, caption);

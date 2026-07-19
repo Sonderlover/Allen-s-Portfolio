@@ -40,24 +40,31 @@ const projects = [
 
 const experience = [
   {
-    title: "Aerospace engineering internship at SAESL",
-    caption: "PLACEHOLDER. Describe what I did day-to-day and what I learned.",
-    image: "assets/images/saesl-placeholder.png",
-    date: ""
+    title: "Internship at Singapore Aero Engine Services (SAESL)",
+    caption: "A 6-month internship at SAESL, the world's largest MRO facility for Rolls-Royce Trent aero engines. I focused mainly on stocktake and inventory checks, verifying that engine parts and components were accounted for and correctly located within the facility. I gained hands-on exposure to how a large-scale engine overhaul operation tracks and manages parts across its inventory system.",
+    image: "assets/images/saesl-logo.png",
+    date: "January to June"
   },
   {
     title: "NITEC in Aerospace Technology",
     caption: "A two-year full-time course covering aircraft airframe and engine maintenance and repair. Hands-on training included riveting and sheet metal work, TIG welding, non-destructive testing (NDT) for detecting defects in aircraft structures, and composite structure repair using cold and hot bonding on honeycomb panels. This technical foundation later shaped how I approach building tools, from hardware-level troubleshooting to systematic problem solving.",
     image: "assets/images/nitec-aerospace-certificate.png",
     certificate: "assets/certificates/nitec-aerospace-technology.pdf",
-    nameNote: "This certificate was issued under my former legal name, Catle Carl Allen Santos, before I became a Singapore citizen.",
+    nameNote: "My school has not updated the name shown on this certificate yet.",
     date: "2024"
   },
   {
-    title: "Event crew at First Wave",
-    caption: "PLACEHOLDER. Describe the role; this also connects to my current internship building tools for live event booths.",
-    image: "assets/images/firstwave-placeholder.png",
+    title: "Part-time crew member at First Wave",
+    caption: "Part-time crew member at First Wave, an events company, helping with event setup and teardown. I helped get venues event-ready and packed down efficiently, and enjoyed the fast-paced, hands-on nature of live event work.",
+    image: "assets/images/first-wave-logo.png",
     date: ""
+  },
+  {
+    title: "Current intern at Adrenalin Group",
+    caption: "Current intern at Adrenalin Group, working across two departments. Under Aether Lab, I build browser-based games for event booths, including Bubble Blitz, a hand-gesture game using MediaPipe. Under AVPD Studios, I help set up event technical equipment such as cameras and lighting for live events.",
+    image: "assets/images/adrenalin-internship.png",
+    video: "assets/videos/adrenalin-game-demo.mp4",
+    date: "Current"
   }
   // Add courses, awards, or other experience entries here using the same shape.
 ];
